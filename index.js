@@ -19,16 +19,23 @@ function moveDodgerLeft() {
     var left = parseInt(leftNumbers, 10);
   
     if ( left < 360) {
-      dodger.style.left = `${left + 4}px`;
+      dodger.style.left = `${left + 1}px`;
     }
   }
 
        
-document.addEventListener('keydown', function(e) {
-    if ( e.which === 37 ) {
-      moveDodgerLeft();
-    }
-    if ( e.which === 39 ) {
+ document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowRight") {
       moveDodgerRight();
     }
   });
+
+
+
+
+dodger.style.backgroundColor = '#FF69B4';
+
+// dodger.style.bottom = 'opx'
+// dodger.style.left = '0px'
+
+// document.addEventListener('keydown', (e) => console.log(e))
